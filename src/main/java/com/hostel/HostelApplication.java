@@ -4,6 +4,7 @@ import config.Initializer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -12,12 +13,13 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import sun.applet.Main;
 
 import javax.faces.webapp.FacesServlet;
 
 @Configuration
-@ComponentScan(basePackages={""})
+@EntityScan("model")
 @EnableAutoConfiguration
 @SpringBootApplication
 public class HostelApplication extends SpringBootServletInitializer {

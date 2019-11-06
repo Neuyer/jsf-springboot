@@ -2,6 +2,7 @@ package controllers;
 
 import model.Guest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 import services.GuestService;
@@ -10,7 +11,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Component
-@RequestScope
+@Scope("request")
 public class GuestController implements Serializable {
     @Autowired
     private GuestService service;

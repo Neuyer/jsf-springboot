@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Guest {
@@ -14,5 +15,6 @@ public class Guest {
     private String name;
     private Float bill;
     private String cpf;
+    @ManyToOne
     private Room room;
 }
